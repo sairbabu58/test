@@ -7,10 +7,10 @@
 
         - name: PIP Install
           shell: python /tmp/get-pip.py
-        - name: Install pip
-          yum:
-            name: python-pip
-            state: latest
+      #  - name: Install pip
+       #   yum:
+        #    name: python-pip
+        #    state: latest
 
         - name: Install docker-py
           pip:
