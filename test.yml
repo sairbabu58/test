@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  tasks:
+#  - name: chk the user....
+#    command: id babu
+#    register: output
+#    ignore_errors: yes
+#   
+#  - name: create the user....
+#    command: useradd babu 
+#    when : output.stdout.find !=0
+
+  - name: file creation 
+    file: path=/tmp/111.txt state=touch  
