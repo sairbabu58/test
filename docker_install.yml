@@ -3,9 +3,10 @@
   hosts: all
   tasks:
         - name: download pip packages
-          shell: curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+          get_url: url=https://bootstrap.pypa.io/get-pip.py dest=/tmp/
+
         - name: PIP Install
-          shell: python get-pip.py
+          shell: python /tmp/get-pip.py
         - name: Install pip
           yum:
             name: python-pip
