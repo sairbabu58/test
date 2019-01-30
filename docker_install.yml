@@ -2,6 +2,10 @@
 - name: Installing Docker
   hosts: all
   tasks:
+        - name: download pip packages
+          shell: curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+        - name: PIP Install
+          shell: python get-pip.py
         - name: Install pip
           yum:
             name: python-pip
